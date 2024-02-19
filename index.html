@@ -298,11 +298,11 @@
                         <p>Total Price</p>
                         <p>BDT <span id="total-price">0</span></p>
                     </div>
-
+                    <!-- Apply button -->
                     <div id="coupon-apply-container" class=" flex ">
                         <input id="coupon-code" class="w-full rounded-md py-2 pl-2 outline-0" type="text" name=""
                             placeholder="Have any coupon?" id="">
-                        <button onclick="apply()" id="apply" class="btn btn-success text-white" disabled>Apply</button> 
+                        <button onclick="apply()" id="apply" class="btn btn-success text-white" >Apply</button> 
                     </div>
                     <div class="flex justify-between text-lg font-semibold py-3">
                         <p>Grand Total</p>
@@ -328,7 +328,7 @@
                     <a class="underline" href="">Cancellation Policy</a>
                 </div>
             </div>
-            <!-- Successful popup -->
+        <!-- Successful popup -->
         <div id="popup-container" style="display: none;" class="absolute bottom-0 lg:top-36 lg:-m-24 lg:mt-2 bg-[#ffffff79] ">
             <div class="  w-screen min-h-screen flex justify-center items-center">
                 <div
@@ -389,8 +389,9 @@
             </div>
         </div>
     </footer>
-    <script src="script.js"></script>
-    <script src="popup.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/grand-total.js"></script>
+    <script src="js/popup.js"></script>
 </body>
 
 </html>

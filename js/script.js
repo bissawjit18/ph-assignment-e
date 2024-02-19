@@ -14,7 +14,7 @@ for (const seat of allSeats) {
     const seatTitle = document.getElementById('get-seat');
 
     const li = document.createElement('li');
-
+    li.classList.add("flex","justify-between");
     const p = document.createElement('p');
     p.innerText = seatNumber;
     const p2 = document.createElement('p');
@@ -26,17 +26,12 @@ for (const seat of allSeats) {
     const totalPrice = document.getElementById('total-price').innerText;
     const convertTotalPrice = parseInt(totalPrice);
     const sum = convertTotalPrice + parseInt(seatPrice);
-
-    const grandTotal = document.getElementById('grand-total').innerText ;
-    const convertGrandTotal = parseInt(grandTotal);
-    const sum2 =  convertGrandTotal + parseInt(seatPrice) ;
     
     const haveSeats = document.getElementsByClassName("have-seats").innerText;
     let devid = 36 - parseInt(count);
 
     
     setInnerText('have-seats', devid);
-    setInnerText('grand-total', sum2);
     setInnerText('total-price', sum);
     setInnerText('seat-count', count);
     
@@ -51,23 +46,5 @@ function setInnerText(id, value) {
   document.getElementById(id).innerText = value;
 }
 
-// Coupon code apply start ------
-document.getElementById("coupon-code").addEventListener("keyup", function (event) {
-  const text = event.target.value;
-  const applyButton = document.getElementById("apply");
 
-  if (text === "NEW15") {
-    applyButton.removeAttribute("disabled");
-    }
-  else if (text === "Couple 20") {
-    applyButton.removeAttribute("disabled");
-    }
-  else {
-    applyButton.setAttribute("disabled", true);
-    }
-  });
-function apply() {
-  const btnApply = document.getElementById("coupon-apply-container");
-  btnApply.style.display = "none";
-}
 
