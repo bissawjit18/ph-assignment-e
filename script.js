@@ -1,3 +1,5 @@
+
+
 const allSeats = document.getElementsByClassName("seat");
 let count = 0;
 
@@ -29,8 +31,11 @@ for (const seat of allSeats) {
     const convertGrandTotal = parseInt(grandTotal);
     const sum2 =  convertGrandTotal + parseInt(seatPrice) ;
     
+    const haveSeats = document.getElementsByClassName("have-seats").innerText;
+    let devid = 36 - parseInt(count);
 
-
+    
+    setInnerText('have-seats', devid);
     setInnerText('grand-total', sum2);
     setInnerText('total-price', sum);
     setInnerText('seat-count', count);
@@ -54,7 +59,7 @@ document.getElementById("coupon-code").addEventListener("keyup", function (event
   if (text === "NEW15") {
     applyButton.removeAttribute("disabled");
     }
-  if (text === "Couple 20") {
+  else if (text === "Couple 20") {
     applyButton.removeAttribute("disabled");
     }
   else {
